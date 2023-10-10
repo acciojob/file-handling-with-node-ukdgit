@@ -10,6 +10,7 @@ if (!filePath || !columnName) {
   process.exit(1);
 }
 
+
 let sum = 0;
 
 fs.createReadStream(filePath)
