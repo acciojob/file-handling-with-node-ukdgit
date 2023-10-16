@@ -15,7 +15,7 @@ function sumCSVColumn(filePath, columnName, callback) {
     console.log('i am here');
       callback(`Error reading the CSV file: ${err}`, null);
       return; // Ensure that the rest of the code doesn't execute
-  });
+  })
   
   stream.pipe(csvParser())
     .on('data', (row) => {
