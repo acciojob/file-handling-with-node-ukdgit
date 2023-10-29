@@ -5,7 +5,7 @@ function sumCSVColumn(filePath, columnName, callback) {
   if (!filePath || !columnName) {
     callback('Usage: node main.js <path_to_csv_file> <column_name>', null);
     return;
-  }
+  };
 
   let sum = 0;
     
