@@ -5,14 +5,14 @@ function sumCSVColumn(filePath, columnName, callback) {
   if (!filePath || !columnName) {
     callback('Usage: node main.js <path_to_csv_file> <column_name>', null);
     return;
-  };
+  }
 
   let sum = 0;
     
   let stream = fs.createReadStream(filePath);
 
   stream.on('error', function(err) {
-    console.log('i am here');
+    //console.log('i am here');
       callback(`Error reading the CSV file: ${err}`, null);
       return; // Ensure that the rest of the code doesn't execute
   });
@@ -31,7 +31,9 @@ function sumCSVColumn(filePath, columnName, callback) {
           }
           callback(null, `The sum of ${columnName} is: ${sum}`);
     });
+    
+    return 
 
 }
 
-module.exports = sumCSVColumn;
+module.exports ={ sumCSVColumn };
